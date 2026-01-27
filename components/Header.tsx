@@ -48,9 +48,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, cartCount = 0, setSearchQue
             className="flex items-center gap-2 z-50 cursor-pointer relative shrink-0"
             onClick={() => handleNavClick('landing')}
           >
-            <div className="size-6 bg-white flex items-center justify-center rounded-sm">
-              <span className="material-symbols-outlined text-background-dark text-[18px]">north_star</span>
-            </div>
             <h2 className="text-white text-xl font-bold tracking-tight uppercase hidden md:block">Zenith</h2>
           </div>
 
@@ -147,7 +144,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, cartCount = 0, setSearchQue
         </nav>
         
         <div className="absolute bottom-10 left-6 text-white/30 text-xs font-bold uppercase tracking-widest">
-           © 2025 Zenith
+           © 2026 Zenith
         </div>
       </div>
     </>

@@ -91,9 +91,6 @@ const Checkout: React.FC<CheckoutProps> = ({ onNavigate, cartItems }) => {
                   className="flex items-center gap-2 cursor-pointer mb-8"
                   onClick={() => onNavigate('landing')}
                 >
-                  <div className="size-6 bg-white flex items-center justify-center rounded-sm">
-                    <span className="material-symbols-outlined text-background-dark text-[18px]">north_star</span>
-                  </div>
                   <h2 className="text-white text-xl font-bold tracking-tight uppercase">Zenith</h2>
                </div>
                <h1 className="text-4xl font-serif italic text-white mb-2">Order Summary</h1>

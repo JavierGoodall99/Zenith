@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
         <div className="md:col-span-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <span className="material-symbols-outlined text-primary">north_star</span>
               <h2 className="text-2xl font-bold tracking-tight uppercase">Zenith</h2>
             </div>
             <p className="text-white/60 max-w-xs leading-relaxed">
