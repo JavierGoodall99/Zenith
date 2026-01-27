@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Loading from './components/Loading';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Narrative from './components/Narrative';
@@ -22,11 +23,20 @@ export interface CartItem extends Product {
 }
 
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [view, setView] = useState<PageView>('landing');
   const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [favourites, setFavourites] = useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // 2.5s for that cinematic feel
+    return () => clearTimeout(timer);
+  }, []);
 
   const navigateTo = (page: PageView, productId?: number) => {
     if (productId) {
@@ -117,6 +127,10 @@ const App: React.FC = () => {
         return null;
     }
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="relative flex flex-col w-full min-h-screen bg-background-dark">
